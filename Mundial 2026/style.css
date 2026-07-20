@@ -1,0 +1,103 @@
+/* Fondo general de la página */
+body {
+    margin: 0;
+    background-color: #f4f1df;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2d1f;
+}
+
+/* Encabezado */
+header {
+    background-color: #146b3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título del encabezado */
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+/* Menú de navegación */
+nav {
+    margin-top: 15px;
+}
+
+/* Enlaces del menú */
+nav a {
+    color: #f7d354;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+}
+
+/* Contenido principal */
+main {
+    padding: 10px;
+}
+
+/* Secciones */
+section {
+    background-color: white;
+    border: 1px solid #146b3a;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* Títulos de las secciones */
+section h2 {
+    color: #146b3a;
+}
+
+
+/* Línea horizontal */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #146b3a;
+}
+
+/* Tablas */
+table {
+    border: 3px dashed #146b3a;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+/* Celdas de la tabla */
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Encabezados de la tabla */
+th {
+    color: #146b3a;
+    font-weight: bold;
+}
+
+/* Color para los horarios */
+.hora {
+    color: #146b3a;
+    font-weight: bold;
+}
+
+/* Nota aclaratoria */
+.nota {
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Pie de página */
+footer {
+    background-color: #0c4023;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+}
