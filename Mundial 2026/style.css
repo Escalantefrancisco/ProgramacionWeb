@@ -26,7 +26,7 @@ nav {
 }
 
 /* Enlaces del menú */
-nav a {
+    nav a {
     color: #f7d354;
     text-decoration: none;
     margin: 10px;

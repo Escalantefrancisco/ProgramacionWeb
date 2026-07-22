@@ -1,0 +1,56 @@
+/* Secciones */
+section {
+    background-color: white;
+    border: 1px solid #146b3a;
+    margin: 10px;
+    padding: 20px;
+}
+.forma{
+
+    width:300px;
+    height:300px;
+    float:left;
+
+}
+
+.forma2{
+
+    width:250px;
+    height:150px;
+
+    float:left;
+
+    margin-left:40px;
+
+}
+
+
+.forma3{
+
+    width:250px;
+    height:150px;
+
+    float:left;
+
+    margin-left:40px;
+
+    margin-top:20px;
+
+}
+
+  .forma4{
+    width: 95%;
+    height: 200px;
+    clear: both;
+}
+
+.principal{
+
+    display:flex;
+
+}
+
+
+
+ 
+
