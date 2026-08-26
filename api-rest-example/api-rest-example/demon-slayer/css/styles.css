@@ -104,3 +104,98 @@ h1 {
         height: auto;
     }
 }
+/* Imágenes de Dragon Ball */
+
+#dragon-ball-container .character-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    object-position: center;
+}
+/* Imágenes de Products */
+
+#products-container .character-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 15px;
+}
+/* Paginación */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+
+.pagination nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.pagination-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.pagination-list li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.pagination-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 42px;
+    height: 42px;
+    padding: 8px 12px;
+    border: 1px solid #222;
+    border-radius: 5px;
+    color: #222;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.pagination-button:hover:not(:disabled) {
+    color: white;
+    background-color: #555;
+}
+
+
+.pagination-button-active {
+    color: white;
+    background-color: #222;
+    border-color: #222;
+    font-weight: bold;
+}
+
+
+.pagination-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+.pagination-button-active:disabled {
+    color: white;
+    background-color: #222;
+    opacity: 1;
+}

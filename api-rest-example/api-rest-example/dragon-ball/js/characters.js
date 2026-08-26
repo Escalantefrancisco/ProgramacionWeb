@@ -1,9 +1,9 @@
 const API_URL =
-    "https://www.demonslayer-api.com/api/v1/characters";
+    "https://dragonball-api.com/api/characters";
 
 
 const charactersContainer =
-    document.getElementById("characters-container");
+    document.getElementById("dragon-ball-container");
 
 
 const previousButton =
@@ -20,9 +20,11 @@ const paginationList =
 
 let currentPage = 1;
 
+
 const limit = 5;
 
-const totalPages = 9;
+
+const totalPages = 6;
 
 
 
@@ -37,16 +39,28 @@ function createCharacterCard(character) {
 
     card.innerHTML = `
         <img
-            src="${character.img}"
+            src="${character.image}"
             alt="${character.name}"
         >
-
-        <h3>${character.id}</h3>
 
         <h2>${character.name}</h2>
 
         <p>
-            Edad: ${character.age}
+            Raza: ${character.race}
+        </p>
+
+        <p>
+            Género: ${character.gender}
+        </p>
+
+        <p>
+            Ki: ${character.ki}
+        </p>
+
+        <p>
+            <strong>
+                Presiona para ver detalles
+            </strong>
         </p>
     `;
 
@@ -121,7 +135,7 @@ async function getCharacters(page) {
         if (!response.ok) {
 
             throw new Error(
-                "Error al cargar los personajes"
+                "No se pudieron cargar los personajes"
             );
         }
 
@@ -131,7 +145,7 @@ async function getCharacters(page) {
 
 
         console.log(
-            "Respuesta de la API:",
+            "Respuesta de Dragon Ball:",
             data
         );
 
@@ -139,7 +153,7 @@ async function getCharacters(page) {
         charactersContainer.innerHTML = "";
 
 
-        data.content.forEach(character => {
+        data.items.forEach(character => {
 
             const card =
                 createCharacterCard(character);
@@ -155,7 +169,7 @@ async function getCharacters(page) {
 
         nextButton.disabled =
             currentPage === totalPages;
-        
+
 
         showPageNumbers();
 

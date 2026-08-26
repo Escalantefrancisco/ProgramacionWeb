@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>API REST</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .api-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .api-card {
+            width: 300px;
+            min-height: 300px;
+            padding: 30px;
+            text-align: center;
+            color: #111;
+            text-decoration: none;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #00000025;
+            transition: transform 0.3s;
+        }
+
+        .api-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .api-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 170px;
+            font-size: 100px;
+        }
+
+        .api-card h2 {
+            margin: 15px 0 5px;
+        }
+
+        .api-card p {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>API REST</h1>
+
+        <section class="api-container">
+
+            <a
+                href="demon-slayer/characters.html"
+                class="api-card">
+
+                <div class="api-icon">⚔️</div>
+
+                <h2>Demon Slayer</h2>
+
+                <p>Ver personajes</p>
+            </a>
+
+
+            <a
+                href="dragon-ball/characters.html"
+                class="api-card">
+
+                <div class="api-icon">🐉</div>
+
+                <h2>Dragon Ball</h2>
+
+                <p>Ver personajes</p>
+            </a>
+
+
+            <a
+                href="products/products.html"
+                class="api-card">
+
+                <div class="api-icon">🛍️</div>
+
+                <h2>Products</h2>
+
+                <p>Ver productos</p>
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
