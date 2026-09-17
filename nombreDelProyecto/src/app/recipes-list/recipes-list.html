@@ -1,0 +1,48 @@
+<p> recipes-list works!</p>
+<div class="recipes-list-container">
+
+  <!--<h1>Recipes List</h1>-->
+
+  <table>
+
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Difficulty</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    @for (recipe of recipesList().recipes; track recipe.id) {
+
+    <tr>
+
+      <td>
+        {{ recipe.id }}
+      </td>
+
+      <td>
+        {{ recipe.name }}
+      </td>
+
+      <td>
+        {{ recipe.difficulty }}
+      </td>
+
+      <td class="actions">
+        <a [routerLink]="['/recipes-detail', recipe.id]">View details (from tag a)</a>
+        <button (click)="viewRecipe(recipe.id)">View details (from function)</button>
+      </td>
+
+    </tr>
+
+    }
+
+    </tbody>
+
+  </table>
+
+</div>
