@@ -1,0 +1,44 @@
+header {
+  background-color: #315f9e;
+  border-bottom: 3px solid #244b80;
+}
+
+.header-content {
+  width: 94%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.brand {
+  display: block;
+  margin-bottom: 14px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  padding: 7px 10px;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #244b80;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+}

@@ -1,11 +1,1 @@
-nav {
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: blue;
-}
-
-
+:host { display: block; min-height: 100vh; }

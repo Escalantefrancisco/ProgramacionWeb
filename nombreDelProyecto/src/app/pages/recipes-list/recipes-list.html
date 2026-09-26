@@ -1,0 +1,38 @@
+<main class="page">
+  <header class="page-heading">
+    <h1>Buscar recetas</h1>
+    <p>Filtra el listado por nombre y nivel de dificultad.</p>
+  </header>
+  <section class="filters">
+    <div class="search-field">
+      <label for="searchName">Nombre de la receta</label>
+      <input id="searchName" type="text" [(ngModel)]="searchName" placeholder="Ejemplo: Pizza">
+    </div>
+    <fieldset>
+      <legend>Dificultad</legend>
+      <label><input type="radio" name="difficulty" value="All" [(ngModel)]="selectedDifficulty"> Todas</label>
+      <label><input type="radio" name="difficulty" value="Easy" [(ngModel)]="selectedDifficulty"> Fácil</label>
+      <label><input type="radio" name="difficulty" value="Medium" [(ngModel)]="selectedDifficulty"> Media</label>
+      <label><input type="radio" name="difficulty" value="Hard" [(ngModel)]="selectedDifficulty"> Difícil</label>
+    </fieldset>
+    <button type="button" (click)="filterRecipes()">Aplicar filtros</button>
+  </section>
+  <div class="result-bar"><strong>{{ recipesList().length }}</strong> recetas encontradas</div>
+  <div class="table-container">
+    <table>
+      <thead><tr><th>ID</th><th>Nombre</th><th>Dificultad</th><th>Acciones</th></tr></thead>
+      <tbody>
+        @for (recipe of recipesList(); track recipe.id) {
+          <tr>
+            <td>{{ recipe.id }}</td>
+            <td><div class="recipe-name"><img [src]="recipe.image" [alt]="recipe.name"><strong>{{ recipe.name }}</strong></div></td>
+            <td><span class="badge">{{ recipe.difficulty }}</span></td>
+            <td><button type="button" (click)="viewRecipe(recipe.id)">Ver detalle</button></td>
+          </tr>
+        } @empty {
+          <tr><td class="empty" colspan="4">No se encontraron recetas con esos filtros.</td></tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</main>

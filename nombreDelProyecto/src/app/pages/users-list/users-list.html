@@ -1,0 +1,16 @@
+<main class="page">
+  <header class="page-heading"><h1>Listado de usuarios</h1><p>Información general y publicaciones registradas por cada usuario.</p></header>
+  <div class="users-container">
+    @for (user of userList.users; track user.id) {
+      <article class="user-card">
+        <header><img [src]="user.image" [alt]="user.firstName"><div><span>USUARIO {{ user.id }}</span><h2>{{ user.firstName }} {{ user.lastName }}</h2><p>@{{ user.username }} · {{ user.email }}</p></div></header>
+        <section class="posts">
+          <h3>Publicaciones</h3>
+          @for (post of getPostsByUser(user.id); track post.id) {
+            <div class="post"><p class="post-title">{{ post.id }}. {{ post.title }}</p><p class="post-body">{{ post.body }}</p></div>
+          } @empty { <p class="no-posts">Este usuario no tiene publicaciones.</p> }
+        </section>
+      </article>
+    }
+  </div>
+</main>

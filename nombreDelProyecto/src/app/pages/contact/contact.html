@@ -1,16 +1,11 @@
-<p>contact works!</p>
-
-<p>Nombre: {{ name }}</p>
-
-<p>{{ name }}</p>
-
-<button>{{ textButton }}</button>
+<main class="page">
+<header class="page-heading"><h1>Perfiles y créditos</h1><p>Información de contacto y situación crediticia de los clientes.</p></header>
 
 @for (i of data; track i) {
   <article class="profile">
     
     <div class="item">
-      <h1>PERFIL</h1>
+      <span class="section-label">PERFIL</span>
 
       <h3>
         {{ i.firstName }}
@@ -23,10 +18,15 @@
     </div>
 
     <div class="item">
-      <h1>H.CRÉDITO</h1>
+      <span class="section-label">HISTORIAL DE CRÉDITO</span>
+      <h3>{{ i.creditId }}</h3>
+      <p><strong>Monto:</strong> Q{{ i.loanAmount }}</p>
+      <p><strong>Saldo actual:</strong> Q{{ i.currentBalance }}</p>
+      <p><strong>Estado:</strong> {{ i.creditStatus }}</p>
     </div>
 
   </article>
 } @empty {
   <p>Sin informacion</p>
 }
+</main>

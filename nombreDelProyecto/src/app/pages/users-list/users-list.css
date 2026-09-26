@@ -1,0 +1,67 @@
+.users-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 16px;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  background-color: white;
+}
+
+.user-card > header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+  background-color: #eef3f8;
+}
+
+.user-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-card header span {
+  color: #315f9e;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.user-card h2 {
+  margin: 4px 0;
+  font-size: 18px;
+}
+
+.user-card header p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.posts {
+  padding: 16px;
+}
+
+.post {
+  padding: 10px;
+  border-left: 3px solid #315f9e;
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.post-body {
+  margin: 0;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.4;
+}
