@@ -1,0 +1,35 @@
+PROYECTO MODIFICADO - CATALOGO DE ANIME
+
+COMO EJECUTARLO
+1. Extrae este ZIP.
+2. Abre en Visual Studio Code la carpeta angular-rest-api-app-main.
+   Debe ser la carpeta donde está angular.json.
+3. Abre la terminal y ejecuta:
+
+   npm ci
+   npm start
+
+4. Abre http://localhost:4200
+5. Para la tarea, entra en "Estilos de combate":
+   http://localhost:4200/combat-styles
+
+CAMBIOS
+- Menú ordenado y colores suaves en verde.
+- Tarjetas de estilos con dos columnas iguales (50% y 50%).
+- Columna izquierda: imagen arriba y descripción abajo, en mitades iguales.
+- Columna derecha: ID, nombre y descripción del personaje cuando existe.
+- Imágenes completas usando object-fit: contain.
+- Listas de personajes ordenadas y textos de prueba eliminados de las páginas.
+- Mensajes de carga, error y botón para volver a intentar cargar los estilos.
+
+ENTREGA
+La instrucción de la tarea pide únicamente el enlace del repositorio.
+Sube los archivos modificados a tu repositorio y entrega ese enlace.
+
+VERIFICACION
+La compilación de TypeScript y de las plantillas con el compilador Angular
+pasó sin errores. La compilación completa de producción no pudo terminar
+en el entorno de revisión porque las dependencias del ZIP original estaban
+instaladas para Windows. No se incluyen node_modules ni cachés: npm ci
+instalará las dependencias correspondientes a tu computadora.
+Se requiere Internet para cargar las imágenes y los estilos de combate.

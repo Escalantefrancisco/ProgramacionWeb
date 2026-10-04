@@ -1,0 +1,7 @@
+html, body { min-height: 100%; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f3f5f2; color: #303b36; }
+* { box-sizing: border-box; }
+h2 { margin: 0 0 8px; font-size: 23px; color: #31564b; }
+p { line-height: 1.6; overflow-wrap: anywhere; }
+button { font: inherit; cursor: pointer; padding: 8px 14px; border: 1px solid #73968b; border-radius: 5px; background: white; color: #31564b; }
+a:focus-visible, button:focus-visible { outline: 3px solid #d8a448; outline-offset: 3px; }

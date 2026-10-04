@@ -1,0 +1,12 @@
+.main-container {
+  width: 400px;
+  height: 400px;
+  background-color: orange;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+

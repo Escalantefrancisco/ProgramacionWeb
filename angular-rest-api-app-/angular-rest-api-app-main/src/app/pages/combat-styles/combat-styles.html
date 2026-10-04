@@ -1,0 +1,16 @@
+<h2>Estilos de combate</h2>
+<p class="intro">Conoce cada estilo y los personajes que lo utilizan.</p>
+@if (loading()) {
+  <p role="status">Cargando estilos de combate...</p>
+} @else if (error()) {
+  <p role="alert">{{ error() }}</p>
+  <button type="button" (click)="loadCombatStyles()">Intentar de nuevo</button>
+} @else {
+  <div class="styles-list">
+    @for (item of combatStyles(); track item.id) {
+      <app-secondary-character-card [data]="item" />
+    } @empty {
+      <p>No hay estilos para mostrar.</p>
+    }
+  </div>
+}

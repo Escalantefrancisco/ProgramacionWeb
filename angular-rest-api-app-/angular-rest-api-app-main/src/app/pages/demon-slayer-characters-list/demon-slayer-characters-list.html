@@ -1,0 +1,9 @@
+<h2>Personajes de Demon Slayer</h2>
+<p class="intro">Una colección de personajes y sus historias.</p>
+<div class="character-list">
+  @for (item of getDemonSlayerCharacterList(); track item.id) {
+    <app-character-card [data]="item" [type]="characterCardType.ROUNDED" />
+  } @empty {
+    <p>No hay personajes para mostrar.</p>
+  }
+</div>

@@ -1,0 +1,9 @@
+<h2>Personajes de Dragon Ball</h2>
+<p class="intro">Conoce a los guerreros y su historia.</p>
+<div class="character-list">
+  @for (item of getDbzCharacterList(); track item.id) {
+    <app-character-card [data]="item" [type]="characterCardType.FILLED" />
+  } @empty {
+    <p>No hay personajes para mostrar.</p>
+  }
+</div>

@@ -1,0 +1,7 @@
+.header { background: #fff; border-bottom: 3px solid #73968b; padding: 22px 20px; }
+h1 { margin: 0 0 18px; font-size: 25px; color: #31564b; }
+.header, main { padding-left: max(20px, calc((100% - 1100px) / 2)); padding-right: max(20px, calc((100% - 1100px) / 2)); }
+.menu { display: flex; flex-wrap: wrap; gap: 10px; }
+.menu a { text-decoration: none; color: #31564b; padding: 10px 16px; border: 1px solid #c5d7ce; border-radius: 6px; background: #f3f7f4; }
+.menu a:hover, .menu a.active { background: #31564b; color: white; }
+main { padding-top: 26px; padding-bottom: 32px; }

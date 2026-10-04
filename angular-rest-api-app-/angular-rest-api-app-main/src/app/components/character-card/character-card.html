@@ -1,0 +1,10 @@
+<mat-card class="main-container">
+  <div class="image-area">
+    <img [ngClass]="type() === 'filled' ? 'image-filled' : 'image-rounded'"
+         [src]="data().img" [alt]="data().name" loading="lazy">
+  </div>
+  <mat-card-content>
+    <h3>{{ data().id }} - {{ data().name }}</h3>
+    <p>{{ data().description }}</p>
+  </mat-card-content>
+</mat-card>

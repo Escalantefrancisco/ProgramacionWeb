@@ -1,0 +1,28 @@
+<mat-card class="combat-card">
+  <mat-card-content class="card-content">
+    <section class="style-info" aria-label="Estilo de combate">
+      <div class="style-image">
+        <img [src]="data().img" [alt]="data().name" loading="lazy">
+      </div>
+      <div class="style-description">
+        <span class="style-id">Estilo #{{ data().id }}</span>
+        <h3>{{ data().name }}</h3>
+        <p>{{ data().description }}</p>
+      </div>
+    </section>
+    <section class="characters" aria-label="Personajes del estilo">
+      <h3>Personajes</h3>
+      @for (character of data().combat_style_character; track character.id) {
+        <article class="character">
+          <span class="character-id">ID: {{ character.id }}</span>
+          <h4>{{ character.name }}</h4>
+          @if (character.description) {
+            <p>{{ character.description }}</p>
+          }
+        </article>
+      } @empty {
+        <p>No hay personajes para este estilo.</p>
+      }
+    </section>
+  </mat-card-content>
+</mat-card>
